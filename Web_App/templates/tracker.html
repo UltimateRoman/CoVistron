@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block div %}<!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static' , filename = 'img/tracker-bg.jpg') }}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>CoViD-19 Tracker</h1>
+            <span class="subheading">Real-Time Tracking of COVID-19 cases around the World
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p style = "color: DodgerBlue">This tracker is not entirely accurate and should not be taken with much importance in statistical approaches.<p>
+        <p style = "color: LightPink">The numbers below are indeed overwhelming to see. But do not lose your optimism as there are many mild
+        and unreported but recovered cases out there, so the mortality rate isn't as high as what it seems to be now.</p>
+        <br>
+        <h3 style = "color: CadetBlue"> Global Report </h3>
+        <br>
+         <ul class = "list-group" style="list-style-type:none; color: DimGrey">
+          <li class="list-group-item">Total Cases : {{tc}}</li>
+          <li class="list-group-item">Active Cases : {{ac}}</li>
+          <li class="list-group-item">Recovered Cases : {{rc}}</li>
+          <li class="list-group-item">Deaths : {{dc}}</li>
+         </ul>
+         <br>
+         <h3 style = "color: CadetBlue"> India </h3>
+        <br>
+         <ul class = "list-group" style="list-style-type:none; color: DimGrey">
+          <li class="list-group-item">Total Cases : {{itc}}</li>
+          <li class="list-group-item">Active Cases : {{iac}}</li>
+          <li class="list-group-item">Recovered Cases : {{irc}}</li>
+          <li class="list-group-item">Deaths : {{idc}}</li>
+          <li class="list-group-item">Critical Cases : {{icc}}</li>
+          <li class="list-group-item">Cases reported today : {{iitoc}}</li>
+          <li class="list-group-item">Deaths reported today : {{iitod}}</li>
+         </ul>
+      </div>
+    </div>
+  </div>
+<br><br>
+<p>Sourced from worldometers.info<br>
+For more information, visit <a style = "color: Teal" href = "https://www.worldometers.info/coronavirus/" target = "_blank">Worldometers</a></p>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block div %}
+<header class="masthead" style="background-image: url('{{ url_for('static' , filename = 'img/login-bg.jpg')}}'">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Home-Automation Login</h1>
+            <span class="subheading">
+              <center>Powered by Bolt IoT</center>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="login">
+    <center>
+	<h1 style = "color: CornflowerBlue">Login for registered users</h1>
+	<br>
+    <form method="post" action = "/automate">
+    	<input type="text" name="device" placeholder="Bolt Device-ID" required="required" />
+    	<br>
+        <input type="password" name="apikey" placeholder="Bolt API_Key" required = "required" />
+        <hr>
+        <button type="submit" class="btn btn-primary">Let me in</button>
+    </form>
+    </center>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block div %} <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{ url_for('static' , filename = 'img/about-bg.jfif')}}'">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>About CoVistron</h1>
+            <span class="subheading">
+              How it helps quarantined people
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p style = "color: SteelBlue"> CoVistron aims to curb the spread of CoVid-19 by being a companion for home-quarantined people around the 
+        world. It brings with itself a cluster of intelligent devices powered by IoT to fulfill this purpose. These devices help people reinforce basic
+        but necessary precautions such as washing hands for atleast 20 seconds, avoiding touching the face, minimizing contact around the home, etc.
+        CoVistron deploys home automation to minimize physical contact of people with home appliances.</p>
+        <p style = "color: SteelBlue"> CoVistron's Web App boasts of a real-time functional CoVid-19 tracker giving interested users data to analyse
+        the current situation. However we recommend you take its definiteness with a grain of salt.</p>
+        <p style = "color: SteelBlue"> We have listed general precautions in the Web App to promote awareness. Also we request all of you to follow the
+        guidelines set by the WHO and the health ministries of your respective countries without fail.</p>
+        <p style = "color: SteelBlue"> CoVistron's Web App also has an amusing section 'Feeling Bored?' to help people find thrilling methods to entertain
+        themselves in case their enthusiasm has become depleted.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

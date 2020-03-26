@@ -1,0 +1,77 @@
+{% extends "layout.html" %} {% block div %} <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static' , filename =
+
+'img/home-bg.jfif')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+
+<div class="site-heading">
+            <h1>CoVistron</h1>
+       <h2>Presented by Beta_Codinators</h2>     <span class="subheading">An all-in-one project to curb the
+
+pandemic by guiding the quarantined people</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  </head> <div
+
+class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+ <h4 class="post-title" style = "color: SkyBlue"> The World is affected
+by the CoViD-19 pandemic and many nations have put their people under lockdown. Each individual has the
+ duty to follow the guidelines set by their respective health organisations to curb the pandemic. But home-quarantine can be an unpleasant experience
+ for many, especially for long periods of time. This can take a toll on people and may cause unprecedented consequences. To make quarantine a safe and
+ satisfactory affair, we have devised CoVistron.</h4>
+ <br><br>
+<h4 class="post-title" style = "color: CornflowerBlue">
+              CoVistron consists of a cluster of intelligent devices(to help with basic health precautions in daily life activities)
+              with home-automation(to minimise contact with home appliances and surfaces, all coordinated by the Web App to guide, accompany and
+              entertain people under quarantine.</h4>
+<center><p class="font-italic" style = "color: PaleVioletRed">Please login for Home-Automation</p></center>
+<p style = "color: SteelBlue">In addition to home-automation, we offer the following devices...</p>
+            <div class="shadow-none p-3 mb-5 bg-light rounded">
+            <p class="post-subtitle" style = "color: Coral">
+              1. Smart Cap - For the people who have trouble trying not to touch their face. It can preform an incredible role and prevent you from
+              getting infected. It is equipped with an ultrasonic sensor to detect whether your hands are approaching your face and warns you using
+              a buzzer alert.
+            </p>
+            <br>
+             <center><img src="{{ url_for('static' , filename = 'img/cap.jpg')}}" alt="Smart Cap" style="width:500px;height:400px;"> </center>
+             </div>
+            <br>
+            <div class="shadow-none p-3 mb-5 bg-light rounded">
+            <p class="post-subtitle" style = "color: Coral">
+              2. Handwashing tracker - Makes you wash your hands for atleast 20 sec. Handwashing for atleast 20 sec with a suitable soap or handwash
+              helps to cripple any microbes which may have made it to your hands. A sensor checks your time period of your handwash and the buzzer
+              beeps continuously if you didn't make it to the 20 second threshold.
+            </p>
+            <br>
+            <center><img src="{{ url_for('static' , filename = 'img/track.jpg')}}" alt="Tracker" style="width:500px;height:400px;"> </center>
+            </div>
+            <br>
+            <div class="shadow-none p-3 mb-5 bg-light rounded">
+            <p class="post-subtitle" style = "color: Coral">
+              3. Contactless handwash/sanitiser dispenser - Prevents spread of infection from shared handwashes/sanitisers. A simple motor helps to deliver
+              suitable amount of sanitiser/handwash to your hands by detecting the presence of your hands.
+            </p>
+            <br>
+            <center><img src="{{ url_for('static' , filename = 'img/dispenser.jpg')}}" alt="Safe Dispenser" style="width:400px;height:500px;"> </center>
+            <br>
+            </div>
+            <h4 class="post-subtitle" style = "color: LightSteelBlue">
+              And much more rolling out soon.....
+            </h4>
+      </div>
+    </div>
+  </div>
+
+ {% endblock %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <head>
+        <title>CoVistron</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel = "icon" href =  
+        "{{ url_for('static' , filename = 'img/title-icon.png')}}" type = "image/x-icon">
+        <script type="text/javascript" src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+        <script>
+        setKey('{{API_KEY}}','{{Device_ID}}');
+        </script>
+    </head>
+    <body style = "background-color: lightblue">
+        <center>
+        <a class="btn btn-primary" href="/" role="button">Go Back to Home</a>
+        <br><br>
+        <p class="text-left" style = "color: LightSeaGreen">Welcome {{Device_ID}}</p>
+        <br>
+        <h1 style = "color: DarkSalmon">Home Automation</h1>
+        <br>
+        <br>
+        <br>
+        <p style = "color: MediumSlateBlue">Control the neccessary ports with the buttons provided.</p>
+        <br>
+        <p style = "color: MediumSlateBlue">In cases you are room-quarantined and want to alert the other members of your house via buzzer use this panel:</p>
+        <button onclick="digitalWrite(4, 'HIGH');" type="button" class="btn btn-danger">Send Alert</button>
+        <button onclick="digitalWrite(4, 'LOW');" type="button" class="btn btn-dark">Stop Alert</button>
+        <br><br>
+        <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2 style = "color: Lavender">Port 0</h2>
+        <br>
+        <button onclick="digitalWrite(0, 'HIGH');" type="button" class="btn btn-outline-success">ON</button>
+        <button onclick="digitalWrite(0, 'LOW');" type="button" class="btn btn-outline-danger">OFF</button>
+        <br>
+        <br>
+        <button onclick="analogWrite(0, 50);" type="button" class="btn btn-outline-primary">Low Power</button>
+        <button onclick="analogWrite(0, 150);" type="button" class="btn btn-outline-primary">Medium Power</button>
+        <button onclick="analogWrite(0, 255);" type="button" class="btn btn-outline-primary">High Power</button>
+        </div>
+        <br><br>
+        <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2 style = "color: Lavender">Port 1</h2>
+        <br>
+        <button onclick="digitalWrite(1, 'HIGH');" type="button" class="btn btn-outline-success">ON</button>
+        <button onclick="digitalWrite(1, 'LOW');" type="button" class="btn btn-outline-danger">OFF</button>
+        <br>
+        <br>
+        <button onclick="analogWrite(1, 50);" type="button" class="btn btn-outline-primary">Low Power</button>
+        <button onclick="analogWrite(1, 150);" type="button" class="btn btn-outline-primary">Medium Power</button>
+        <button onclick="analogWrite(1, 255);" type="button" class="btn btn-outline-primary">High Power</button>
+        </div>
+        <br><br>
+        <div class="shadow p-3 mb-5 bg-white rounded" style = "background-color: MistyRose">
+        <h2 style = "color: Lavender">Port 2</h2>
+        <br>
+        <button onclick="digitalWrite(2, 'HIGH');" type="button" class="btn btn-outline-success">ON</button>
+        <button onclick="digitalWrite(2, 'LOW');" type="button" class="btn btn-outline-danger">OFF</button>
+        <br>
+        <br>
+        <button onclick="analogWrite(2, 50);" type="button" class="btn btn-outline-primary">Low Power</button>
+        <button onclick="analogWrite(2, 150);" type="button" class="btn btn-outline-primary">Medium Power</button></button>
+        <button onclick="analogWrite(2, 255);" type="button" class="btn btn-outline-primary">High Power</button>
+        </div>
+        <br><br>
+        <div class="shadow p-3 mb-5 bg-white rounded">
+        <h2 style = "color: Lavender">Port 3</h2>
+        <br>
+        <button onclick="digitalWrite(3, 'HIGH');" type="button" class="btn btn-outline-success">ON</button>
+        <button onclick="digitalWrite(3, 'LOW');" type="button" class="btn btn-outline-danger">OFF</button>
+        <br>
+        <br>
+        <button onclick="analogWrite(3, 50);" type="button" class="btn btn-outline-primary">Low Power</button>
+        <button onclick="analogWrite(3, 150);" type="button" class="btn btn-outline-primary">Medium Power</button></button>
+        <button onclick="analogWrite(3, 255);" type="button" class="btn btn-outline-primary">High Power</button>
+        </div>
+        <br><br>
+        </center>
+  <hr>
+  <div class="bottom-container">
+    <center>
+    <p class="copyright">© 2020 Beta_Codinators</p>
+    </center>
+  </div>
+    </body>
+</html>
